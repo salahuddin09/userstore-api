@@ -45,4 +45,97 @@ The application uses gradle as a build tool. To build and run go to project dire
 ```
 It can be then accessed at `localhost:8080`.
 
+API Details
+
+POST
+- Create user
+
+```
+http://localhost:8080/api/userstore/users/ 
+
+json
+{
+  "name": "Enter User Name",
+  "country": "Enter Country Name"
+}
+```
+
+GET
+- Get User
+
+```
+http://localhost:8080/api/userstore/users/{user_id} 
+```
+PUT
+- Update User by id
+
+```
+http://localhost:8080/api/userstore/users/{user_id} 
+
+json
+{
+  "name": "Enter User Name",
+  "country": "Enter Country Name"
+}
+```
+
+POST
+Add  UserProgress By UserId
+
+```
+http://localhost:8080/api/userstore/userprogress/{user_id} 
+
+json
+{
+  "level": Enter Level e.g. 1,
+  "score": Enter Score e.g 10.0
+}
+```
+
+PUT
+ Update UserProgress By UserId
+
+```
+http://localhost:8080/api/userstore/userprogress/{user_id} 
+
+json
+{
+  "level": Enter Level e.g. 1,
+  "score": Enter Score e.g 10.0
+}
+```
+
+GET
+Get User Progress By UserId
+
+```
+http://localhost:8080/api/userstore/userprogress/{user_id} 
+```
+
+GET
+- Get list of 10 user progress based on top score value.
+
+```
+http://localhost:8080/api/userstore/leaderboard/users/
+```
+
+GET
+ - Get user score by user id
+
+```
+http://localhost:8080/api/userstore/leaderboard/user/{user_id} 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
